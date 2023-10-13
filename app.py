@@ -34,4 +34,4 @@ def predict():
         return 'male'
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', os.environ.get('PORT', 5000))  # Use provided port or 5000 if not provided
+    app.run(host='0.0.0.0', port=os.environ.get('PORT', 5000))  # Use provided port or 5000 if not provided
