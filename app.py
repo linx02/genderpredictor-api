@@ -29,9 +29,9 @@ def predict():
     prediction = model.predict(img_array)  # Make prediction
 
     if np.argmax(prediction) == 0:
-        return 'female'
+        return jsonify({'gender': 'female'})
     else:
-        return 'male'
+        return jsonify({'gender': 'male'})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=os.environ.get('PORT', 5000))  # Use provided port or 5000 if not provided
